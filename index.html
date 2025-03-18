@@ -1,184 +1,127 @@
+
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>개인 자기소개 홈페이지</title>
-  <style>
-    /* 기본 리셋 */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    /* 네비게이션 */
-    nav {
-      background: #f0f8ff;
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #007acc;
-    }
-    /* 프로필 섹션 */
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .profile {
-      position: relative;
-      width: 150px;
-      height: 150px;
-      margin: 0 auto;
-      cursor: pointer;
-    }
-    .profile img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-    }
-    .profile:hover img {
-      transform: scale(1.1);
-    }
-    .intro {
-      display: none;
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1.2em;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .intro.active {
-      display: block;
-      opacity: 1;
-    }
-    /* 포트폴리오 섹션 */
-    .portfolio {
-      margin-bottom: 40px;
-    }
-    .portfolio h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .portfolio-item {
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-    }
-    .portfolio-item img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .portfolio-item h3 {
-      text-align: center;
-      margin-top: 10px;
-    }
-    /* 연락처 섹션 */
-    .contact {
-      text-align: center;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    /* 스무스 스크롤 */
-    html {
-      scroll-behavior: smooth;
-    }
-    /* 반응형 디자인 */
-    @media(max-width: 768px) {
-      .container {
-        width: 95%;
-        padding: 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- 네비게이션 -->
-  <nav>
-    <a href="#profile-section">프로필</a>
-    <a href="#portfolio-section">포트폴리오</a>
-    <a href="#contact-section">연락처</a>
-  </nav>
-  <div class="container">
-    <!-- 프로필 및 자기소개 섹션 -->
-    <header id="profile-section">
-      <div class="profile" id="profile">
-        <img src="29011440.jpg" alt="프로필 이미지">
-      </div>
-      <div class="intro" id="intro">
-        <p>안녕하세요, 김세진입니다.<br>주로 백엔드랑 인프라를 하는 개발자로서 멋진 인터넷 세상을 주도하고 있습니다.</p>
-      </div>
-    </header>
-    <!-- 포트폴리오 섹션 -->
-    <section class="portfolio" id="portfolio-section">
-      <h2>포트폴리오</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <a href="https://webwizard.life" target="_blank">
-            <img src="webwizard_logo.png" alt="WebWizard 동아리 로고">
-          </a>
-            <h3>WebWizard 동아리 회장 활동</h3>
-        </div>
-        <div class="portfolio-item">
-          <img src="NO_IMAGE.png" alt="프로젝트 2">
-          <h3>kick-yoon 웹사이트 개발</h3>
-        </div>
-        <div class="portfolio-item">
-          <img src="whitehat.jpg" alt="프로젝트 3">
-          <h3>화이트햇 투게더 3등상 수상</h3>
-        </div>
-        <div class="portfolio-item">
-          <img src="mastodon.jpg" alt="프로젝트 4">
-          <h3>페디버스 서버 운영</h3>
-        </div>
-      </div>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta property="og:locale" content="ko_KR"/>
+	<meta property="og:site_name" content="SJang1's Profile"/>
+	<meta property="og:title" content="SJang1"/>
+	<meta itemprop="name" content="SJang1"/>
+	<meta name="twitter:title" content="SJang1"/>
+	<meta property="og:url" content="https://sjang1.github.io"/>
+	<meta name="twitter:url" content="https://sjang1.github.io"/>
+	<meta property="og:type" content="site"/>
+	<meta property="og:description" content="SJang1's Profile!"/>
+	<meta name="description" content="SJang1's Profile!"/>
+	<meta itemprop="description" content="SJang1's Profile!"/>
+	<meta name="twitter:description" content="SJang1's Profile!"/>
+	<meta property="og:image" content="./29011440.jpg"/>
+	<meta itemprop="image" content="./29011440.jpg"/>
+	<meta name="twitter:image" content="./29011440.jpg"/>
+	<meta name="twitter:card" content="summary">
+	<meta name="theme-color" content="#e41bb1">
+	<meta name="msapplication-TileColor" content="#e41bb1">
+	<link rel="icon" href="./29011440.jpg" type="image/x-icon"/>
+	<link rel="shortcut icon" href="./29011440.jpg"/>
+	<meta name="msapplication-TileImage" content="/profile.png">
+	<title>SJang1</title>
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<link href="main.css" rel="stylesheet" crossorigin="anonymous">
+	<nav id=nav>
+		<a href=#!/home title=Home class=active>Home</a>
+		<a href=#!/about title="About me">About</a>
+		<a href=#!/friends title="My friends">Friends</a>
+    <a href=#!/projects title="My projects">Friends</a>
+	</nav>
+	<main id="main">
+		<section data-name="home">
+			<div class="container">
+				<a href="#!/about" class="avatar">
+					<img src="./29011440.jpg">
+				</a>
+				<h1>SJang1</h1>
+				<p>Back-End / Infrastructure Developer</p>
+								<br />
+				<p>상호: 스쟝컴퍼니 | 대표: 김세진</p>
+				<p>전자상거래 도매 소매업 | 사업자등록번호: 520-11-02298</p>
+			</div>
+		</section>
+		<section data-name="about">
+			<div class="container">
+				<article class="about-card">
+					<h2>SJang1</h2>
+					<p>인프라 관리만 하고 싶은 아무튼 개발자입니다.</p>
+					<ul class="about-contact">
+						<li>
+							<span>Email</span>
+							<a href="mailto:siliconsjang@gmail.com" target="_blank">siliconsjang@gmail.com</a>
+						</li>
+						<li>
+							<span>Phone</span>
+							<a href="callto:+812051368286" target="_blank">+82 10-5136-8286</a>
+						</li>
+						<li>
+							<span>GitHub</span>
+							<a href="https://github.com/SJang1" target="_blank">SJang1</a>
+						</li>
+						<li>
+							<span>Telegram</span>
+							<a href="https://t.me/siliconsjang" target="_blank">siliconsjang</a>
+						</li>
+						<li>
+							<span>Twitter</span>
+							<a href="https://twitter.com/SJang_a" target="_blank">SJang_a</a>
+						</li>
+						<li>
+							<span>k.lapy.link (Misskey, ActivityPub)</span>
+							<a href="https://k.lapy.link/@SJang" target="_blank">@SJang@k.lapy.link</a>
+						</li>
+						<li>
+							<span>Discord</span>
+							<a href="https://discord.gg/users/207222885654200321" target="_blank">cocoa_hoto</a>
+						</li>
+						<li>
+							<span>Discord Server</span>
+							<a href="https://discord.gg/cocoacafe" target="_blank">cocoacafe</a>
+						</li>
+						<li>
+							<span>VRChat</span>
+							<a href="https://vrchat.com/home/user/usr_f36e9b28-6f97-455e-bbbe-adb7ea2fb9b4" target="_blank">Hoto Cocoa</a>
+						</li>
+						<li>
+							<span>VRChat Group</span>
+							<a href="https://vrc.group/COCOA.1885" target="_blank">COCOA.1885</a>
+						</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+		<section data-name="friends">
+			<ul>
+				<li>
+					<img src="" class="avatar">
+					<div class="info">
+						<p class="description">YOU ALL ARE MY FRIENDS</p>
+					</div>
+				</li>
+      </ul>
     </section>
-    <!-- 연락처 섹션 -->
-    <section class="contact" id="contact-section">
-      <h2>연락처</h2>
-      <p>siliconsjang@gmail.com</p>
-      <p>+82 10 5136 8286</p>
-    </section>
-  </div>
-  <script>
-    // 프로필 이미지 클릭 시 자기소개 토글
-    document.getElementById("profile").addEventListener("click", function() {
-      var intro = document.getElementById("intro");
-      intro.classList.toggle("active");
-    });
-  </script>
-</body>
+    <section data-name="projects">
+          <ul>
+            <li>
+              <img src="./mastodon.jpg" class="mastodon logo">
+              <div class="info"><a href="https://kurry.social/" title="kurry mastodon server" target="_blank" class="name">Mastodon</a>
+                <p class="description">Social Platform Server Operator</p>
+              </div>
+            </li>
+            <li>
+              <img src="./webwizard_logo.png" class="webwizard_logo">
+              <div class="info"><a href="https://webwizard.life/" title="webwizard" target="_blank" class="name">WebWizard club</a>
+                <p class="description">Club president @ Woosong University</p>
+              </div>
+            </li>
+                </ul>
+      </section>
+	</main>
+	<script src="main.js" crossorigin="anonymous"></script>
 </html>
