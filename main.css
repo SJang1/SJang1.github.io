@@ -8,12 +8,12 @@
 }
 
 ::-moz-selection {
-	color: #FFC0CB;
+	color: #e41bb1;
 	background: #FFFFFF;
 }
 
 ::selection {
-	color: #FFC0CB; 
+	color: #e41bb1; 
 	background: #FFFFFF;
 }
 
@@ -280,7 +280,7 @@ section {
 }
 
 .home-on {
-	background: #FFC0CB
+	background: #e41bb1
 }
 
 section[data-name=home] {
